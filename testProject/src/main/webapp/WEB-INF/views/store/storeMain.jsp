@@ -5,7 +5,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <%
-	request.setAttribute("selectMenu", "store");
+	request.setAttribute("selectMenu", "store"); 
 %>
 <!DOCTYPE HTML>
 <html>
