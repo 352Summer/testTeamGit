@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%
+	String selectMenu = (String)request.getAttribute("selectMenu");
+%>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -70,7 +76,7 @@
 					<div class="row">
 						<!-- 로고 시작 -->
 						<div class="col-sm-7 col-md-9">
-							<div id="colorlib-logo"><a href="<%= request.getContextPath() %>/views/final/summer.jsp">Summer</a></div>
+							<div id="colorlib-logo"><a href="${pageContext.request.contextPath}">Summer</a></div>
 						</div>
 						<!-- 로고 끝 -->
 						<!-- 검색 시작 -->
@@ -89,9 +95,9 @@
 						<!-- 메뉴 시작 -->
 						<div class="col-sm-12 text-left menu-1">
 							<ul>
-								<li id="navHome" class="active"><a href="<%= request.getContextPath() %>/views/final/summer.jsp">Home</a></li>
-								<li id="navStore" class="has-dropdown">
-									<a href="<%= request.getContextPath() %>/views/final/storeMain.jsp">STORE</a>
+								<li id="navHome" class=<%= selectMenu == null ? "'active'" : "" %>><a href="${pageContext.request.contextPath}">Home</a></li>
+								<li id="navStore" class=<%= selectMenu != null && selectMenu.equals("store") ? "'has-dropdown active'" : "'has-dropdown'" %>>
+									<a href="${pageContext.request.contextPath}/store/selectStoreMain.do">STORE</a>
 									<ul class="dropdown">
 										<li><a href="product-detail.html">Product Detail</a></li>
 										<li><a href="cart.html">Shopping Cart</a></li>
@@ -100,17 +106,16 @@
 										<li><a href="add-to-wishlist.html">Wishlist</a></li>
 									</ul>
 								</li>
-								<li id="navCommunity" class="has-dropdown">
+								<li id="navLookBook" class=<%= selectMenu != null && selectMenu.equals("lookBook") ? "'has-dropdown active'" : "'has-dropdown'" %>><a href="${pageContext.request.contextPath}/lookbook/selectLookbookList.do">LOOKBOOK</a></li>
+								<li id="navCommunity" class=<%= selectMenu != null && selectMenu.equals("community") ? "'has-dropdown active'" : "'has-dropdown'" %>>
 									<a href="women.html">COMMUNITY</a>
 									<ul class="dropdown">
-										<li><a href="product-detail.html">룩북</a></li>
 										<li><a href="cart.html">커뮤니티</a></li>
 										<li><a href="checkout.html">중고거래</a></li>
 										<li><a href="order-complete.html">공지사항</a></li>
 									</ul>
 								</li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li id="navCS" class=<%= selectMenu != null && selectMenu.equals("cs") ? "'has-dropdown active'" : "'has-dropdown'" %>>><a href="<%= request.getContextPath() %>/views/final/summer.jsp">CS</a></li>
 								<li style="float : right;"><a href="cart.html">login</a></li>
 								<li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
 							</ul>
@@ -147,7 +152,9 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
 	</div>
-
+<script>
+<%-- <%= selectMenu.equals("store") ? "'has-dropdown active'" : "'has-dropdown'" %> --%>
+</script>
 	</body>
 </html>
 
