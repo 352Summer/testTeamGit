@@ -115,7 +115,7 @@
 										<li><a href="order-complete.html">공지사항</a></li>
 									</ul>
 								</li>
-								<li id="navCS" class=<%= selectMenu != null && selectMenu.equals("cs") ? "'has-dropdown active'" : "'has-dropdown'" %>>><a href="<%= request.getContextPath() %>/views/final/summer.jsp">CS</a></li>
+								<li id="navCS" class=<%= selectMenu != null && selectMenu.equals("cs") ? "'has-dropdown active'" : "'has-dropdown'" %>><a href="<%= request.getContextPath() %>/views/final/summer.jsp">SERVICE CENTER</a></li>
 								<li style="float : right;"><a href="cart.html">login</a></li>
 								<li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
 							</ul>
