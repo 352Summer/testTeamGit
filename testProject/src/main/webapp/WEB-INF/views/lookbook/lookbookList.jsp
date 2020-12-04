@@ -3,14 +3,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-
 <%
 	request.setAttribute("selectMenu", "lookBook");
 %>
 <!DOCTYPE HTML>
 <html>
 	<head>
-	<title>LOOKBOOK</title>
+	<title>Summer - LOOKBOOK</title>
 	<meta charset="utf-8">
    
 	</head>
@@ -44,8 +43,8 @@
 								<img src="<%= request.getContextPath() %>/resources/images/item-1.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
 							</a>
 							<div class="desc">
-								<h2><a href="#">Women's Boots Shoes Maca</a></h2>
-								<span class="price">$139.00</span>
+								<h2><a href="#">룩북 제목 - 신발</a></h2>
+								<span class="price">룩북 내용 - 사이트 색상에 알맞는 신발</span>
 							</div>
 						</div>
 					</div>

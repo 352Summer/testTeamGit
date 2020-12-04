@@ -4,12 +4,12 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%
-	request.setAttribute("selectMenu", "store"); 
+	request.setAttribute("selectMenu", "community");
 %>
 <!DOCTYPE HTML>
 <html>
 	<head>
-	<title>Summer - STORE</title>
+	<title>Summer - COMMUNITY</title>
 	<meta charset="utf-8">
    
 	</head>
@@ -26,67 +26,16 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<p class="bread"><span><a href="${pageContext.request.contextPath}">Home</a></span> / <span>Store Main</span></p>
+						<p class="bread"><span><a href="${pageContext.request.contextPath}">Home</a></span> / <span>Community</span></p>
 					</div>
 				</div>
-				<h1>Store</h1>
+				<h1>Community</h1>
 				<hr style="margin-top:-10px;"/>
 			</div>
 		</div>
 
-		<div class="breadcrumbs-two">
+		<div class="colorlib-product" style="margin-top:-80px;">
 			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="breadcrumbs-img" style="background-image: url(<%= request.getContextPath() %>/resources/images/cover-img-1.jpg);">
-							<h2>Men's</h2>
-						</div>
-						<div class="menu text-center">
-							<p><a href="#">New Arrivals</a> <a href="#">Best Sellers</a> <a href="#">Extended Widths</a> <a href="#">Sale</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="colorlib-featured">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4 text-center">
-						<div class="featured">
-							<div class="featured-img featured-img-2" style="background-image: url(<%= request.getContextPath() %>/resources/images/men.jpg);">
-								<h2>Casuals</h2>
-								<p><a href="#" class="btn btn-primary btn-lg">Shop now</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 text-center">
-						<div class="featured">
-							<div class="featured-img featured-img-2" style="background-image: url(<%= request.getContextPath() %>/resources/images/women.jpg);">
-								<h2>Dress</h2>
-								<p><a href="#" class="btn btn-primary btn-lg">Shop now</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 text-center">
-						<div class="featured">
-							<div class="featured-img featured-img-2" style="background-image: url(<%= request.getContextPath() %>/resources/images/item-11.jpg);">
-								<h2>Sports</h2>
-								<p><a href="#" class="btn btn-primary btn-lg">Shop now</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="colorlib-product">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-8 offset-sm-2 text-center colorlib-heading colorlib-heading-sm">
-						<h2>View All Products</h2>
-					</div>
-				</div>
 				<div class="row row-pb-md">
 					<div class="col-md-3 col-lg-3 mb-4 text-center">
 						<div class="product-entry border">

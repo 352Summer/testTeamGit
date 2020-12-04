@@ -108,14 +108,14 @@
 								</li>
 								<li id="navLookBook" class=<%= selectMenu != null && selectMenu.equals("lookBook") ? "'has-dropdown active'" : "'has-dropdown'" %>><a href="${pageContext.request.contextPath}/lookbook/selectLookbookList.do">LOOKBOOK</a></li>
 								<li id="navCommunity" class=<%= selectMenu != null && selectMenu.equals("community") ? "'has-dropdown active'" : "'has-dropdown'" %>>
-									<a href="women.html">COMMUNITY</a>
+									<a href="${pageContext.request.contextPath}/community/selectCommunityMain.do">COMMUNITY</a>
 									<ul class="dropdown">
 										<li><a href="cart.html">커뮤니티</a></li>
 										<li><a href="checkout.html">중고거래</a></li>
 										<li><a href="order-complete.html">공지사항</a></li>
 									</ul>
 								</li>
-								<li id="navCS" class=<%= selectMenu != null && selectMenu.equals("cs") ? "'has-dropdown active'" : "'has-dropdown'" %>>><a href="<%= request.getContextPath() %>/views/final/summer.jsp">CS</a></li>
+								<li id="navCS" class=<%= selectMenu != null && selectMenu.equals("cs") ? "'has-dropdown active'" : "'has-dropdown'" %>><a href="${pageContext.request.contextPath}/cs/csMain.jsp">CS</a></li>
 								<li style="float : right;"><a href="cart.html">login</a></li>
 								<li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
 							</ul>
